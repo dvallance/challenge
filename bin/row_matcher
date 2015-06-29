@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require 'challenge'
+
+# Handle all arguments/options checking before processing.
+Arguments.parse ARGV
+
+args = Arguments.instance
+CSVProcessor.run input: args.input, output: args.output, matcher: args.matcher
